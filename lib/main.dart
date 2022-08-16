@@ -129,7 +129,7 @@ class _MyAppState extends State<MyApp> {
                 setState(() {
                   _fromfirstDate = DateTime.now()
                       .subtract(Duration(days: DateTime.now().month));
-                  _fromendDate = DateTime.now();
+                  _fromendDate = DateTime.now().add(Duration(days: 1));
                   result = "Başlangıç Tarihi : " +
                       _fromfirstDate.toString() +
                       "\nBitiş Tarihi : " +
@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
                 });
               } else if (_fromendDate == null) {
                 setState(() {
-                  _fromendDate = DateTime.now();
+                  _fromendDate = DateTime.now().add(Duration(days: 1));
                   result = "Başlangıç Tarihi : " +
                       _fromfirstDate.toString() +
                       "\nBitiş Tarihi : " +
